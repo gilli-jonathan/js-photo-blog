@@ -18,7 +18,11 @@ body {
     & > img{
         position: absolute;
         top: -10px ;
-        left: 160px;
+        left: 50%;
+        transform: translateX(-50%)
+        /* transform suggeritomi dal signor alberto google */
+
+
     }
 
     box-shadow: 5px 5px 10px #0000008e;
