@@ -57,4 +57,20 @@ body {
     }
 }
 
+@media screen and (max-width: 576px) {
+   
+   
+header {
+        height: 77.5px;
+        margin-bottom: 0rem;
 
+        h1 {
+            font-size: 51px;
+        }
+    }
+    
+}
+
+body {
+    min-width: 560px;
+}
