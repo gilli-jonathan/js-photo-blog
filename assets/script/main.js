@@ -48,12 +48,12 @@ function create_polaroid(obj) {
   //matrioska dei vari elementi html tramite .appendChild
   //col contiene:
   col.appendChild(polaroid);
-  col.appendChild(card_text);
 
   //polaroid contiene:
   polaroid.appendChild(pin);
   polaroid.appendChild(pol_img);
   pol_img.appendChild(the_img);
+  polaroid.appendChild(card_text);
 
   //card_text contiene
   card_text.appendChild(p);
