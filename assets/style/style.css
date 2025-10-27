@@ -1,0 +1,10 @@
+header {
+    height: 130px;
+    background-image: url(../img/wall.png);
+
+    h1 {
+        font-size: 95px;
+        text-align: center;
+    }
+    
+}
