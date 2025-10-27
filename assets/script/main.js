@@ -7,10 +7,16 @@ TASK, CREARE UNA FUNZIONE CHE DOPO UNA CHIAMATA AJAX CREAI LE CARD IN AUTONOMIA
         -usare createElement per rendere le card nodi della Dom
 */
 
-//AGGIUNTA DI 2 FUNZIONI GLOBALI DA USARE NELLA CHIAMATA AJAX
+//AGGIUNTA DI 1 FUNZIONI GLOBALE DA USARE NELLA CHIAMATA AJAX
 
 const board = document.createElement("div");
-board.classList.add("row", "row-cols-1", "row-cols-md-2", "row-cols-lg-3");
+board.classList.add(
+  "row",
+  "row-cols-1",
+  "row-cols-md-2",
+  "row-cols-lg-3",
+  "container"
+);
 
 //FUNZIONE PER CREARE LE POLAROID
 function create_polaroid(obj) {
@@ -62,10 +68,11 @@ fetch("https://lanciweb.github.io/demo/api/pictures/")
   .then((info) => {
     //ciclo dentro l'array di oggetti (info)
     info.forEach((obj) => {
-      console.log(obj);
       console.log(create_polaroid(obj));
 
       const all_photo = create_polaroid(obj);
       board.appendChild(all_photo);
     });
   });
+
+document.getElementById("div-container").appendChild(board);
