@@ -6,7 +6,7 @@ TASK, CREARE UNA FUNZIONE CHE DOPO UNA CHIAMATA AJAX CREAI LE CARD IN AUTONOMIA
     -anche se più complesso preferibile usare createElement per rendere le card veri e propri nodi della Dom così da renderle più facilmente interagibili domani 
 */
 
-//creazione di elementi tramite document.createElement + assegnazione classe da mettere nella funzione
+//creazione di tutti gli elementi html tramite document.createElement + assegnazione classe
 
 const col = document.createElement("div");
 col.classList.add("col");
@@ -20,14 +20,28 @@ pin.scr = "./assets/img/pin.svg";
 const pol_img = document.createElement("div");
 pol_img.classList.add("polaroid-img");
 
-const img = document.createElement("img");
-img.src = pol_img.appendChild(img);
+const the_img = document.createElement("img");
+img.src;
 
 const card_text = document.createElement("div");
-card - text.classList.add("card-text");
+card_text.classList.add("card-text");
 
 const p = document.createElement("p");
 p.textContent;
 
 const title = document.createElement("h3");
 title.textContent;
+
+//matrioska dei vari elementi html tramite .appendChild
+//col contiene:
+col.appendChild(polaroid);
+col.appendChild(card_text);
+
+//polaroid contiene:
+polaroid.appendChild(pin);
+polaroid.appendChild(pol_img);
+pol_img.appendChild(the_img);
+
+//card_text contiene
+card_text.appendChild(p);
+card_text.appendChild(h3);
