@@ -8,40 +8,44 @@ TASK, CREARE UNA FUNZIONE CHE DOPO UNA CHIAMATA AJAX CREAI LE CARD IN AUTONOMIA
 
 //creazione di tutti gli elementi html tramite document.createElement + assegnazione classe
 
-const col = document.createElement("div");
-col.classList.add("col");
+function create_polaroid() {
+  const col = document.createElement("div");
+  col.classList.add("col");
 
-const polaroid = document.createElement("div");
-polaroid.classList.add("polaroid");
+  const polaroid = document.createElement("div");
+  polaroid.classList.add("polaroid");
 
-const pin = document.createElement("img");
-pin.scr = "./assets/img/pin.svg";
+  const pin = document.createElement("img");
+  pin.scr = "./assets/img/pin.svg";
 
-const pol_img = document.createElement("div");
-pol_img.classList.add("polaroid-img");
+  const pol_img = document.createElement("div");
+  pol_img.classList.add("polaroid-img");
 
-const the_img = document.createElement("img");
-img.src;
+  const the_img = document.createElement("img");
+  img.src;
 
-const card_text = document.createElement("div");
-card_text.classList.add("card-text");
+  const card_text = document.createElement("div");
+  card_text.classList.add("card-text");
 
-const p = document.createElement("p");
-p.textContent;
+  const p = document.createElement("p");
+  p.textContent;
 
-const h3 = document.createElement("h3");
-title.textContent;
+  const h3 = document.createElement("h3");
+  title.textContent;
 
-//matrioska dei vari elementi html tramite .appendChild
-//col contiene:
-col.appendChild(polaroid);
-col.appendChild(card_text);
+  //matrioska dei vari elementi html tramite .appendChild
+  //col contiene:
+  col.appendChild(polaroid);
+  col.appendChild(card_text);
 
-//polaroid contiene:
-polaroid.appendChild(pin);
-polaroid.appendChild(pol_img);
-pol_img.appendChild(the_img);
+  //polaroid contiene:
+  polaroid.appendChild(pin);
+  polaroid.appendChild(pol_img);
+  pol_img.appendChild(the_img);
 
-//card_text contiene
-card_text.appendChild(p);
-card_text.appendChild(h3);
+  //card_text contiene
+  card_text.appendChild(p);
+  card_text.appendChild(h3);
+
+  return col;
+}
