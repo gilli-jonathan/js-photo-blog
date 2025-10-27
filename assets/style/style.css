@@ -8,6 +8,9 @@ header {
     }
 }
 
+main {
+    margin-bottom: 6rem;
+}
 body {
     background-image: url(../img/cork.png); 
 }
