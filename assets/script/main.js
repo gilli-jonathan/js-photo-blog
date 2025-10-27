@@ -29,7 +29,7 @@ card_text.classList.add("card-text");
 const p = document.createElement("p");
 p.textContent;
 
-const title = document.createElement("h3");
+const h3 = document.createElement("h3");
 title.textContent;
 
 //matrioska dei vari elementi html tramite .appendChild
