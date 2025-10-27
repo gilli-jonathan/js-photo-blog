@@ -13,15 +13,32 @@ body {
 }
 
 .polaroid {
+
+    & > img{
+        position: absolute;
+        top: -10px ;
+        left: 160px;
+        
+    }
+
+    position: relative;
     height: 450px;
     /* width: 356px; */
     padding: 15px;
     margin-top: 3rem;
     background-color: white;
     
-    #card-img {
+    .polaroid-img {
         height: 326px;
         background-color: brown;
     }
 
-}px
+}
+
+.card-text {
+    p {
+        color: grey;
+        margin-top: 1.5rem;
+        margin-bottom: 0;
+    }
+}
