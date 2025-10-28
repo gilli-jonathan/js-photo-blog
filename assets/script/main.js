@@ -36,6 +36,7 @@ function create_polaroid(obj) {
 
   const the_img = document.createElement("img");
   the_img.src = obj.url;
+  the_img.setAttribute("id", obj.id);
 
   const card_text = document.createElement("div");
   card_text.classList.add("card-text");
@@ -79,7 +80,7 @@ fetch("https://lanciweb.github.io/demo/api/pictures/")
   .catch((err) => {
     const error_obj = [
       {
-        id: 1,
+        id: "sorry",
         title: "MI DISPIACE :(",
         date: "ERRORE DI CARICAMENTO",
         url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5mRIGY1YWkktGM9N25bbLzNg7UQfW4e-kvw&s",
