@@ -63,6 +63,10 @@ function create_polaroid(obj) {
     //accendere il div Overlay
     overlayEl.classList.remove("spento");
     overlayEl.classList.add("acceso");
+
+    //mettere l'immagine corrispondente nell'overlay
+    const over_imgEl = document.getElementById("over-img");
+    over_imgEl.src = obj.url;
   });
 
   return col;
