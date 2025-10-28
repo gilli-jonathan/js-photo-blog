@@ -59,6 +59,12 @@ function create_polaroid(obj) {
 
   //aggiungere l'evento di click per mettere l'immagine scelta in over
 
+  the_img.addEventListener("click", function () {
+    //accendere il div Overlay
+    overlayEl.classList.remove("spento");
+    overlayEl.classList.add("acceso");
+  });
+
   return col;
 }
 
