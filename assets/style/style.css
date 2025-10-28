@@ -9,6 +9,7 @@ header {
   background-image: url(../img/wall.png);
   margin-bottom: 4rem;
   h1 {
+    font-family: Edu Tas Beginner;
     font-size: 95px;
     text-align: center;
   }
@@ -19,8 +20,6 @@ main {
 }
 
 body {
-  font-family: Edu Tas Beginner;
-  font-size: larger;
   background-image: url(../img/cork.png);
 }
 
@@ -74,6 +73,7 @@ body {
   }
 
   h3 {
+    font-family: Edu Tas Beginner;
     text-transform: uppercase;
   }
 }
