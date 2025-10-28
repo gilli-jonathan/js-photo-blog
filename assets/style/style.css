@@ -1,3 +1,5 @@
+/* #region MAIN PAGE RULES */
+
 header {
     height: 130px;
     background-image: url(../img/wall.png);
@@ -56,7 +58,25 @@ body {
         font-style: italic;
     }
 }
+/* #endregion MAIN PAGE RULES */
 
+
+/* OVERLAY RULES */
+
+.overlay {
+  position: absolute; /* Posiziona l'overlay in modo assoluto rispetto alla pagina */
+  top: 0;             /* Allinea l'overlay in alto */
+  bottom: 0;          /* Allinea l'overlay in basso */
+  left: 0;            /* Allinea l'overlay a sinistra */
+  right: 0;           /* Allinea l'overlay a destra */
+  background-color: rgba(0, 0, 0, 0.7); /* Sfondo nero semitrasparente (70% opacità) */
+  z-index: 1;         /* Assicura che sia sopra il contenuto della pagina */
+}
+
+
+
+
+/* RESPONSIVE RULES */
 @media screen and (max-width: 576px) {
    
    
