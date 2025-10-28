@@ -62,6 +62,7 @@ body {
 
 
 /* OVERLAY RULES */
+
 #overlay {
 
   position: absolute;
@@ -95,14 +96,13 @@ body {
 
 }
 
-.spento {
-    display: none;
-  }
-
 .flecs {
     display: flex;
-  }
+}
 
+.spento {
+    display: none;
+}
 
 /* RESPONSIVE RULES */
 @media screen and (max-width: 576px) {
