@@ -87,7 +87,6 @@ body {
 
   #over-cont-img {
     margin-top: 2rem;
-    background-color: red;
     height: 551px;
     width: 551px;
   }
@@ -98,7 +97,7 @@ body {
       display: none;
   }
 
-  .acceso {
+  .flecs {
       display: flex;
   }
 

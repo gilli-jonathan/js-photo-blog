@@ -62,7 +62,6 @@ function create_polaroid(obj) {
   the_img.addEventListener("click", function () {
     //accendere il div Overlay
     overlayEl.classList.remove("spento");
-    overlayEl.classList.add("acceso");
 
     //mettere l'immagine corrispondente nell'overlay
     const over_imgEl = document.getElementById("over-img");
