@@ -21,7 +21,7 @@ body {
 .col {
  &:hover {
   transform: rotate(10deg) scale(1.1);   
-  z-index: 2; 
+  z-index:1; 
 
 
  }
@@ -103,7 +103,7 @@ body {
     height: 100vh;
     width: 100vw;
     background-color: rgba(0, 0, 0, 0.7);
-    z-index: 1;
+    z-index: 2;
     flex-direction: column;
     align-items: center;
     justify-content: center;
