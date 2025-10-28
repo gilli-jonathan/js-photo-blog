@@ -39,6 +39,10 @@ body {
     
     .polaroid-img {
         
+        :hover {
+        cursor: pointer;
+        }
+
        & > img {
         height: 100%;
         width: 100%;
@@ -77,7 +81,7 @@ body {
 
 /* #endregion SCROLLBAR STYLE */
 
-/* OVERLAY RULES */
+/* #region OVERLAY RULES */
 
 #overlay {
 
@@ -121,6 +125,8 @@ body {
 .spento {
     display: none;
 }
+/* #endregion OVERLAY RULES */
+
 
 /* RESPONSIVE RULES */
 @media screen and (max-width: 576px) {
