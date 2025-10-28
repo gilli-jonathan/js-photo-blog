@@ -18,8 +18,14 @@ body {
     background-image: url(../img/cork.png); 
 }
 
-.polaroid {
+.col {
+ :hover {
+  transform: rotate(10deg) scale(1.1);
+        
+ }
+}
 
+.polaroid {
 
     & > img{
         position: absolute;
