@@ -22,8 +22,13 @@ body {
  &:hover {
   transform: rotate(10deg) scale(1.1);   
   z-index:1; 
-
-
+  
+  .polaroid {
+    box-shadow: 10px 10px 15px #0000009d;
+    &>img {
+     display: none;
+    }
+  }
  }
 
 }
@@ -37,8 +42,6 @@ body {
         left: 50%;
         transform: translateX(-50%)
         /* transform suggeritomi dal signor alberto google */
-
-
     }
 
     box-shadow: 5px 5px 10px #0000008e;
