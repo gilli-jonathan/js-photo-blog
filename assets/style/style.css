@@ -60,6 +60,22 @@ body {
 }
 /* #endregion MAIN PAGE RULES */
 
+/* #region SCROLLBAR STYLE */
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: rgba(255, 255, 255, 0.564);
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.46);
+    border-radius: 20px;
+}
+
+/* #endregion SCROLLBAR STYLE */
 
 /* OVERLAY RULES */
 
@@ -69,7 +85,9 @@ body {
   top: 0;            
   bottom: 0;       
   left: 0;           
-  right: 0;           
+  right: 0;          
+  height: 100 vh;
+  width: 100 vw;
   background-color: rgba(0, 0, 0, 0.7);
   z-index: 1;  
   flex-direction: column;

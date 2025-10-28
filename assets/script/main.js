@@ -4,6 +4,9 @@
 const closedEL = document.getElementById("closed-btn");
 const overlayEl = document.getElementById("overlay");
 
+//aggiunta del body per nascondere l'overflow
+const bodyEl = document.getElementById("body");
+
 //creazione del nodo principale per funzionamento della funzione
 const board = document.createElement("div");
 board.classList.add(
@@ -66,6 +69,9 @@ function create_polaroid(obj) {
     //mettere l'immagine corrispondente nell'overlay
     const over_imgEl = document.getElementById("over-img");
     over_imgEl.src = obj.url;
+
+    //bloccare lo scorrimento del body
+    bodyEl.classList.add("overflow-hidden");
   });
 
   return col;
@@ -108,4 +114,6 @@ document.getElementById("div-container").appendChild(board);
 
 closedEL.addEventListener("click", function () {
   overlayEl.classList.add("spento");
+  //rimettere lo scorrimento del body
+  bodyEl.classList.remove("overflow-hidden");
 });
