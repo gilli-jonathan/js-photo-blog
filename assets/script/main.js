@@ -1,13 +1,9 @@
-//AGGIUNTA DI 1 FUNZIONI GLOBALE DA USARE NELLA CHIAMATA AJAX
-
-//prendo i vari elementi che mi serviranno creando dei nodi
+//nodi per l'overlay
 const closedEL = document.getElementById("closed-btn");
 const overlayEl = document.getElementById("overlay");
-
-//aggiunta del body per nascondere l'overflow
 const bodyEl = document.getElementById("body");
 
-//creazione del nodo principale per funzionamento della funzione
+//nodo in cui posizionare le card
 const board = document.createElement("div");
 board.classList.add(
   "row",
@@ -61,7 +57,6 @@ function create_polaroid(obj) {
   card_text.appendChild(h3);
 
   //aggiungere l'evento di click per mettere l'immagine scelta in over
-
   the_img.addEventListener("click", function () {
     //accendere il div Overlay
     overlayEl.classList.remove("spento");
@@ -83,14 +78,14 @@ fetch("https://lanciweb.github.io/demo/api/pictures/")
   .then((info) => {
     //ciclo dentro l'array di oggetti (info)
     info.forEach((obj) => {
-      console.log(create_polaroid(obj));
-
+      //creo le polaroid salvando il risultato della funzione in una variabile
       const all_photo = create_polaroid(obj);
       board.appendChild(all_photo);
     });
   })
 
   .catch((err) => {
+    //array da usare in caso di errore per comunicare che qualcosa non funziona
     const error_obj = [
       {
         id: "sorry",
@@ -101,18 +96,17 @@ fetch("https://lanciweb.github.io/demo/api/pictures/")
     ];
 
     error_obj.forEach((obj) => {
-      console.log(create_polaroid(obj));
-
       const all_photo = create_polaroid(obj);
       board.appendChild(all_photo);
     });
   });
 
-document.getElementById("div-container").appendChild(board);
+//alla fine di tutto stampo in pagina il risultato
+const containerEl = document.getElementById("div-container").appendChild(board);
 
 //FUNZIONE PER CHIUDERE L'OVER
-
 closedEL.addEventListener("click", function () {
+  //rimetto la classe che spegne l'overlay
   overlayEl.classList.add("spento");
   //rimettere lo scorrimento del body
   bodyEl.classList.remove("overflow-hidden");
