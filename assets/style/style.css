@@ -1,95 +1,97 @@
+/* #region FONTS */
+@import url("https://fonts.googleapis.com/css2?family=Edu+TAS+Beginner:wght@400;500;600;700&family=Sometype+Mono:wght@400;500;600&display=swap");
+/* #endregion FONTS */
+
 /* #region MAIN PAGE RULES */
 
 header {
-    height: 130px;
-    background-image: url(../img/wall.png);
-    margin-bottom: 4rem;
-    h1 {
-        font-size: 95px;
-        text-align: center;
-    }
+  height: 130px;
+  background-image: url(../img/wall.png);
+  margin-bottom: 4rem;
+  h1 {
+    font-size: 95px;
+    text-align: center;
+  }
 }
 
 main {
-    margin-bottom: 6rem;
+  margin-bottom: 6rem;
 }
 
 body {
-    background-image: url(../img/cork.png); 
+  font-family: Edu Tas Beginner;
+  font-size: larger;
+  background-image: url(../img/cork.png);
 }
 
 .col {
- &:hover {
-  transform: rotate(10deg) scale(1.1);   
-  z-index:1; 
-  
-  .polaroid {
-    box-shadow: 10px 10px 15px #0000009d;
-    &>img {
-     display: none;
+  &:hover {
+    transform: rotate(10deg) scale(1.1);
+    z-index: 1;
+
+    .polaroid {
+      box-shadow: 10px 10px 15px #0000009d;
+      & > img {
+        display: none;
+      }
     }
   }
- }
-
 }
 
 .polaroid {
+  & > img {
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    /* transform suggeritomi dal signor alberto google */
+  }
 
+  box-shadow: 5px 5px 10px #0000008e;
+  position: relative;
+  padding: 26px;
+  margin-top: 3rem;
+  background-color: white;
 
-    & > img{
-        position: absolute;
-        top: -10px ;
-        left: 50%;
-        transform: translateX(-50%)
-        /* transform suggeritomi dal signor alberto google */
+  .polaroid-img {
+    :hover {
+      cursor: pointer;
     }
 
-    box-shadow: 5px 5px 10px #0000008e;
-    position: relative;
-    padding: 26px;
-    margin-top: 3rem;
-    background-color: white;
-    
-    .polaroid-img {
-        
-        :hover {
-        cursor: pointer;
-        }
-
-       & > img {
-        height: 100%;
-        width: 100%;
-        }
+    & > img {
+      height: 100%;
+      width: 100%;
     }
-
+  }
 }
 
 .card-text {
-    p {
-        color: grey;
-        margin-top: 1rem;
-        margin-bottom: 0;
-    }
+  p {
+    font-family: Sometype Mono;
+    color: grey;
+    margin-top: 1rem;
+    margin-bottom: 0;
+  }
 
-    h3 {
-        font-style: italic;
-    }
+  h3 {
+    text-transform: uppercase;
+  }
 }
 /* #endregion MAIN PAGE RULES */
 
 /* #region SCROLLBAR STYLE */
 ::-webkit-scrollbar {
-    width: 6px;
-    height: 6px;
+  width: 6px;
+  height: 6px;
 }
 
 ::-webkit-scrollbar-track {
-    background-color: rgba(255, 255, 255, 0.564);
+  background-color: rgba(255, 255, 255, 0.564);
 }
 
 ::-webkit-scrollbar-thumb {
-    background: rgba(0, 0, 0, 0.46);
-    border-radius: 20px;
+  background: rgba(0, 0, 0, 0.46);
+  border-radius: 20px;
 }
 
 /* #endregion SCROLLBAR STYLE */
@@ -97,66 +99,73 @@ body {
 /* #region OVERLAY RULES */
 
 #overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 2;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 100vh;
-    width: 100vw;
-    background-color: rgba(0, 0, 0, 0.7);
-    z-index: 2;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+  #closed-btn {
+    font-size: 20px;
+    max-width: 15%;
+    margin-top: 4rem;
+  }
 
+  #over-cont-img {
+    margin-top: 2rem;
+    height: 70%;
+    width: auto;
+  }
 
-    #closed-btn {
-        font-size: 20px;
-        max-width: 15%;
-        margin-top: 4rem;
-    }
-
-    #over-cont-img {
-        margin-top: 2rem;
-        height: 551px;
-        width: 551px;
-    }
-
-    #over-img {
-        height: 100%;
-        width: 100%;
-    }
-
+  #over-img {
+    height: 100%;
+    width: 100%;
+  }
 }
 
 .flecs {
-    display: flex;
+  display: flex;
 }
 
 .spento {
-    display: none;
+  display: none;
 }
 /* #endregion OVERLAY RULES */
 
-
-/* RESPONSIVE RULES */
+/* #region RESPONSIVE RULES */
 @media screen and (max-width: 576px) {
-   
-   
-header {
-        height: 77.5px;
-        margin-bottom: 0rem;
+  header {
+    height: 77.5px;
+    margin-bottom: 0rem;
 
-        h1 {
-            font-size: 51px;
-        }
+    h1 {
+      font-size: 51px;
     }
-    
-}
+  }
 
-body {
+  body {
     min-width: 560px;
-}
 
+    #overlay {
+      justify-content: flex-start;
+      min-width: 560px;
+      position: fixed;
+      height: 100vh;
+      width: 100vw;
+
+      #over-cont-img {
+        margin-top: 20px;
+        max-width: 455px;
+        max-height: 455px;
+      }
+    }
+  }
+}
+/* #endregion RESPONSIVE RULES */
