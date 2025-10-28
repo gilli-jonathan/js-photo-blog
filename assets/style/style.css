@@ -19,8 +19,11 @@ body {
 }
 
 .col {
- :hover {
+ &:hover {
   transform: rotate(10deg) scale(1.1);
+
+
+
         
  }
 }
