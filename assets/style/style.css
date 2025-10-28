@@ -62,9 +62,6 @@ body {
 
 
 /* OVERLAY RULES */
-
-
-
 #overlay {
 
   position: absolute;
@@ -91,14 +88,19 @@ body {
     width: 551px;
   }
 
-}
-
-  .spento {
-      display: none;
+  #over-img {
+    height: 100%;
+    width: 100%;
   }
 
-  .flecs {
-      display: flex;
+}
+
+.spento {
+    display: none;
+  }
+
+.flecs {
+    display: flex;
   }
 
 

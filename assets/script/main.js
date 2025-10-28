@@ -103,9 +103,3 @@ fetch("https://lanciweb.github.io/demo/api/pictures/")
   });
 
 document.getElementById("div-container").appendChild(board);
-
-//FUNZIONE PER CHIUDERE L'OVER
-
-closedEL.addEventListener("click", function () {
-  overlayEl.classList.add("spento");
-});
