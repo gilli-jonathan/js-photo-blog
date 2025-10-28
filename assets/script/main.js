@@ -1,12 +1,3 @@
-//Inseriamo un foglio JavaScript ed effettuiamo una chiamata AJAX all’API, sfruttando la risposta per generare dinamicamente in pagina una serie di foto!
-
-/*
-TASK, CREARE UNA FUNZIONE CHE DOPO UNA CHIAMATA AJAX CREAI LE CARD IN AUTONOMIA
-    -la funzione dovrà ciclare all'interno dell ajax 
-    -ogni ciclo crea una polaroid tramite funzione
-        -usare createElement per rendere le card nodi della Dom
-*/
-
 //AGGIUNTA DI 1 FUNZIONI GLOBALE DA USARE NELLA CHIAMATA AJAX
 
 const board = document.createElement("div");
@@ -96,3 +87,13 @@ fetch("https://lanciweb.github.io/demo/api/pictures/")
   });
 
 document.getElementById("div-container").appendChild(board);
+
+//FUNZIONE PER CHIUDERE L'OVER
+
+//prendo i vari elementi che mi serviranno creando dei nodi
+const closedEL = document.getElementById("closed-btn");
+const overlayEl = document.getElementById("overlay");
+
+closedEL.addEventListener("click", function () {
+  overlayEl.classList.add("spento");
+});

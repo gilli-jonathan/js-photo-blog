@@ -65,7 +65,8 @@ body {
 
 
 
-.overlay {
+#overlay {
+
   position: absolute;
   top: 0;            
   bottom: 0;       
@@ -73,7 +74,6 @@ body {
   right: 0;           
   background-color: rgba(0, 0, 0, 0.7);
   z-index: 1;  
-  display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -92,8 +92,15 @@ body {
     width: 551px;
   }
 
-
 }
+
+  .spento {
+      display: none;
+  }
+
+  .acceso {
+      display: flex;
+  }
 
 
 /* RESPONSIVE RULES */
@@ -114,3 +121,4 @@ header {
 body {
     min-width: 560px;
 }
+
