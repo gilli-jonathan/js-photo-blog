@@ -1,5 +1,10 @@
 //AGGIUNTA DI 1 FUNZIONI GLOBALE DA USARE NELLA CHIAMATA AJAX
 
+//prendo i vari elementi che mi serviranno creando dei nodi
+const closedEL = document.getElementById("closed-btn");
+const overlayEl = document.getElementById("overlay");
+
+//creazione del nodo principale per funzionamento della funzione
 const board = document.createElement("div");
 board.classList.add(
   "row",
@@ -52,6 +57,8 @@ function create_polaroid(obj) {
   card_text.appendChild(p);
   card_text.appendChild(h3);
 
+  //aggiungere l'evento di click per mettere l'immagine scelta in over
+
   return col;
 }
 
@@ -89,10 +96,6 @@ fetch("https://lanciweb.github.io/demo/api/pictures/")
 document.getElementById("div-container").appendChild(board);
 
 //FUNZIONE PER CHIUDERE L'OVER
-
-//prendo i vari elementi che mi serviranno creando dei nodi
-const closedEL = document.getElementById("closed-btn");
-const overlayEl = document.getElementById("overlay");
 
 closedEL.addEventListener("click", function () {
   overlayEl.classList.add("spento");
