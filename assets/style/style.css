@@ -76,12 +76,20 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   
  
   #closed-btn {
     font-size: 20px;
     max-width: 15%;
-    margin-top: 3rem;
+    margin-top: 4rem;
+  }
+
+  #over-cont-img {
+    margin-top: 2rem;
+    background-color: red;
+    height: 551px;
+    width: 551px;
   }
 
 
