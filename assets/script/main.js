@@ -74,6 +74,24 @@ fetch("https://lanciweb.github.io/demo/api/pictures/")
       const all_photo = create_polaroid(obj);
       board.appendChild(all_photo);
     });
+  })
+
+  .catch((err) => {
+    const error_obj = [
+      {
+        id: 1,
+        title: "MI DISPIACE :(",
+        date: "ERRORE DI CARICAMENTO",
+        url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5mRIGY1YWkktGM9N25bbLzNg7UQfW4e-kvw&s",
+      },
+    ];
+
+    error_obj.forEach((obj) => {
+      console.log(create_polaroid(obj));
+
+      const all_photo = create_polaroid(obj);
+      board.appendChild(all_photo);
+    });
   });
 
 document.getElementById("div-container").appendChild(board);
